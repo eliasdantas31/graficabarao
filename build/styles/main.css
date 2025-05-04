@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+header div.navbar div.container img {
+  height: auto;
+  width: 200px;
+}
+header div.navbar div.container button {
+  background-color: #000;
+}
+header div.navbar div.container nav ul li a {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  font-weight: 700;
+}
+
+div.background {
+  background-color: #083c75;
+}
+div.background section {
+  height: 100vh;
+}
+div.background section:nth-of-type(1) div.container div.div-gif img {
+  height: auto;
+  width: 300px;
+}
+div.background section:nth-of-type(2) {
+  background-color: #12141a;
+}
+div.background section:nth-of-type(3) {
+  background-color: #fff;
+}
+div.background section:nth-of-type(4) {
+  background-color: #083c75;
+}
+div.background section:nth-of-type(5) {
+  background-color: #fff;
+}
+/*# sourceMappingURL=maps/main.css.map */

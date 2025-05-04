@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafica Barão</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <img src="./imagens/Logo_Grafica-removebg-preview.png" alt="Logo">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#servicos" class="nav-link">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#sobre" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#redes" class="nav-link">Redes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="background" data-bs-spy="scroll" data-bs-target="#menu">
+        <section id="home">
+            <div class="container my-4">
+                <div id="corousel" class="carousel carousel-fade slide" data-bs-rise="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img class="d-block w-100" src="https://placehold.co/600x400" alt="Logo">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img class="d-block w-100" src="https://placehold.co/600x400" alt="Logo">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img class="d-block w-100" src="https://placehold.co/600x400" alt="Logo">
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#corousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#corousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+        <section id="servicos">
+            <h2>Teste</h2>
+        </section>
+        <section id="sobre">
+            <h2>Teste</h2>
+        </section>
+        <section id="redes">
+            <h2>Teste</h2>
+        </section>
+        <section id="contato">
+            <h2>Teste</h2>
+        </section>
+    </div>
+    <footer>
+        <h1>Tittle teste</h1>
+    </footer>
+    <script src="./scripts/main.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+</html>

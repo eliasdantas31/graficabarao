@@ -1,0 +1,110 @@
+@use "./config/reset.scss";
+@use "./config/variaveis.scss";
+
+body{
+    background-color: variaveis.$cor1;
+}
+
+@mixin titleH1(){
+    font-family: variaveis.$fontArchivoBlack;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+@mixin titleH2(){
+    @include titleH1();
+    font-size: 2.8rem !important;
+}
+
+@mixin titleH3(){
+    @include titleH1();
+    font-size: 2.2rem !important;
+}
+
+@mixin titleH4(){
+    @include titleH1();
+    font-size: 1.6rem !important;
+}
+
+@mixin p1() {
+    font-family: variaveis.$fontSpaceGrotesk;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+  
+@mixin p2() {
+    @include p1();
+    font-size: 1rem !important;
+}
+  
+@mixin p3() {
+    @include p1();
+    font-size: 0.9rem !important;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    div.navbar{
+        div.container{
+            img{
+                height: auto;
+                width: 200px;
+            }
+            
+            button{
+                background-color: #000
+            }
+
+            nav{
+                ul{
+                    li{
+                        a{
+                            @include p2();
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.background{
+    background-color: variaveis.$cor3;
+
+    section{
+        height: 100vh;
+    }
+
+    section:nth-of-type(1){
+
+        div.container{
+            div.div-gif{
+                img{
+                    height: auto;
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    section:nth-of-type(2){
+        background-color: variaveis.$cor4;
+    }
+
+    section:nth-of-type(3){
+        background-color: variaveis.$cor1;
+    }
+
+    section:nth-of-type(4){
+        background-color: variaveis.$cor3;
+    }
+
+    section:nth-of-type(5){
+        background-color: variaveis.$cor1;
+    }
+}
+
