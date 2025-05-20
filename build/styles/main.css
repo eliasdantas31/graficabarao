@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +7,11 @@
 
 body {
   background-color: #fff;
+  overflow-x: hidden;
+}
+
+label.error {
+  color: red;
 }
 
 header {
@@ -14,6 +19,8 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 header div.navbar div.container img {
   height: auto;
@@ -22,34 +29,442 @@ header div.navbar div.container img {
 header div.navbar div.container button {
   background-color: #000;
 }
-header div.navbar div.container nav ul li a {
-  font-family: "Space Grotesk", sans-serif;
+header div.navbar div.container nav .nav-pills .nav-link {
+  font-family: "Abel", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  font-size: 1rem !important;
+  font-size: 1.2rem !important;
+  color: #000;
+  font-weight: 600;
+}
+header div.navbar div.container nav .nav-pills .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease-in-out;
+}
+header div.navbar div.container nav .nav-pills .nav-link.active {
+  background: transparent;
+}
+header div.navbar div.container nav .nav-pills .nav-link.active::after {
+  width: 100%;
+}
+header div.navbar div.container nav .nav-pills .nav-link.active a {
   font-weight: 700;
+  color: #000;
 }
 
 div.background {
   background-color: #083c75;
 }
-div.background section {
-  height: 100vh;
+div.background div.title {
+  height: 150px;
 }
-div.background section:nth-of-type(1) div.container div.div-gif img {
+div.background div.title h1 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #fff;
+}
+div.background section {
+  height: max-content;
+}
+div.background section:nth-of-type(1) div button {
+  height: 80px;
+  width: 80px;
+  background-color: #000;
+  border-radius: 50%;
+}
+div.background section:nth-of-type(1) div button span {
+  height: 50%;
+  width: 50%;
+}
+div.background section:nth-of-type(1) div div.carousel {
   height: auto;
-  width: 300px;
+  width: 60% !important;
+}
+div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carousel-item img {
+  filter: brightness(0.7);
+}
+div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carousel-item div.carousel-caption {
+  width: 70%;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carousel-item div.carousel-caption h2 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+  color: #fff;
 }
 div.background section:nth-of-type(2) {
+  height: max-content;
   background-color: #12141a;
 }
-div.background section:nth-of-type(3) {
+div.background section:nth-of-type(2) div {
+  height: 100%;
+  padding: 20px;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(1) {
+  height: inherit;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(1) h2 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+  color: #fff;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) {
+  align-items: stretch;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div {
+  margin-bottom: 1.5rem;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card {
+  min-height: 100%;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-header {
+  border: none;
   background-color: #fff;
 }
-div.background section:nth-of-type(4) {
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-header i {
+  font-size: 3.5rem;
+  color: #000;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-body {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-body h4 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-body p {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-body button {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow {
+  display: none;
+  background-color: whitesmoke;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row {
+  height: max-content;
+  width: 100%;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col-12 label {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col-12 input {
+  width: 50%;
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col button {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  background-color: #16161d;
+  color: whitesmoke;
+  border: 1px solid #16161d;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: whitesmoke;
+  color: #16161d;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow h1 {
+  width: max-content;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow i {
+  width: max-content;
+  font-size: 2.5em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow i:hover {
+  transform: scale(1.2);
+}
+div.background section:nth-of-type(3) {
+  height: 100vh;
   background-color: #083c75;
 }
-div.background section:nth-of-type(5) {
+div.background section:nth-of-type(3) div.container {
+  height: 100%;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) {
+  height: 100%;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 {
+  height: inherit;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text {
+  color: #fff;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text h1 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text p {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
   background-color: #fff;
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  color: #000;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) {
+  width: 100%;
+  position: absolute;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form {
+  display: none;
+  background-color: whitesmoke;
+  width: 35%;
+  padding: 30px;
+  font-size: 0.8em;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form::before {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title {
+  height: max-content;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title h1 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.2rem !important;
+  font-size: 2em;
+  color: #000;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title i {
+  font-size: 2.5em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title i:hover {
+  transform: scale(1.2);
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form label {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form input {
+  padding: 6px;
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form textarea {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  resize: none;
+  height: 35.19px;
+  padding: 6px;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.col, div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 10px;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.row {
+  height: max-content;
+  margin-bottom: 10px;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form button {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  background-color: #16161d;
+  color: whitesmoke;
+  border: 1px solid #16161d;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: whitesmoke;
+  color: #16161d;
+}
+div.background section:nth-of-type(4) {
+  background-color: #fff;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(1) {
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(1) h2 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(2) div.col-lg-6 p {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) {
+  height: 200px;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) div.col-12 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) div.col-12 h2 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) div.col-12 a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) div.col-12 a i {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.2rem !important;
+}
+div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) div.col-12 a:hover {
+  transform: scale(1.2);
+}
+div.background section:nth-of-type(5) {
+  height: 50vh;
+  background-color: #083c75;
+}
+div.background section:nth-of-type(5) div.container {
+  height: 100%;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(1) {
+  height: 20%;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(1) h2 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+  color: #fff;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) {
+  height: 80%;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel div.carousel-inner div.carousel-item h2 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 1.6rem !important;
+  color: #fff;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel div.carousel-inner div.carousel-item h4 {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 div {
+  height: 100%;
+  width: 15%;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 div button {
+  height: 80px;
+  width: 80px;
+  background-color: #000;
+  border-radius: 50%;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 div button span {
+  height: 50%;
+  width: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #083c75;
+  color: #fff;
+  border-top: 1px solid #000;
+}
+footer h1 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 1.6rem !important;
+}
+footer h2 {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 /*# sourceMappingURL=maps/main.css.map */
