@@ -89,11 +89,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-header">
-                                <i class="bi bi-printer-fill"></i>
+                                <i class="bi bi-card-text"></i>
                             </div>
                             <div class="card-body">
-                                <h4>Impressão</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quos impedit officia animi esse eos autem quisquam itaque pariatur ipsam. At nulla ipsam quae quisquam vel itaque beatae corporis laborum.</p>
+                                <h4>Cartões</h4>
+                                <p>Produção de cartões profissionais, com design personalizado e alta qualidade de impressão, ideal para fortalecer a identidade visual da sua empresa.</p>
                                 <button id="ser1"; class="btn btn-dark">Solicitar serviço</button>
                             </div>
                         </div>
@@ -101,11 +101,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-header">
-                                <i class="bi bi-newspaper"></i>
+                                <i class="bi bi-book"></i>
                             </div>
                             <div class="card-body">
-                                <h4>Serviço 2</h4>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium saepe cumque, ratione impedit placeat nesciunt voluptatibus debitis animi dolorem! Accusamus est iure, quisquam sapiente consequuntur.</p>
+                                <h4>Catálogos</h4>
+                                <p>Desenvolvimento e impressão de catálogos completos, perfeitos para apresentar seus produtos e serviços de forma organizada e atrativa.</p>
                                 <button id="ser2"; class="btn btn-dark">Solicitar serviço</button>
                             </div>
                         </div>
@@ -113,11 +113,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-header">
-                                <i class="bi bi-c-circle-fill"></i>
+                                <i class="bi bi-card-image"></i>
                             </div>
                             <div class="card-body">
-                                <h4>Serviço 3</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ullam magnam est culpa ipsam sit maiores beatae deserunt itaque sint cupiditate commodi suscipit ad, harum obcaecati aliquam. Neque, vel dolores.</p>
+                                <h4>Folders</h4>
+                                <p>Criação e impressão de folders informativos, ideais para divulgação de campanhas, eventos ou produtos, com acabamento profissional e qualidade.</p>
                                 <button id="ser3"; class="btn btn-dark">Solicitar serviço</button>
                             </div>
                         </div>
@@ -125,11 +125,11 @@
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card">
                             <div class="card-header">
-                                <i class="bi bi-clipboard2-fill"></i>
+                                <i class="bi bi-bookmark"></i>
                             </div>
                             <div class="card-body">
-                                <h4>Serviço 4</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ullam magnam est culpa ipsam sit maiores beatae deserunt itaque sint cupiditate commodi suscipit ad, harum obcaecati aliquam. Neque, vel dolores.</p>
+                                <h4>Faixas</h4>
+                                <p>Produção de faixas promocionais e institucionais, com materiais resistentes e impressão de alta qualidade, para destacar sua marca em qualquer ambiente.</p>
                                 <button id="ser4"; class="btn btn-dark">Solicitar serviço</button>
                             </div>
                         </div>
@@ -162,65 +162,63 @@
                 </div>
             </div>
         </section>
-        <section id="contato" class="p-4">
+        <section id="contato" class="p-4 d-flex justify-content-center align-items-center">
             <div class="container d-flex justify-content-center align-items-center">
-                <div class="row d-flex justify-content-center">
-                    <form id="form" class="form-contato" action="">
-                        <div class="title">
-                            <h1>Entre em contato conosco</h1>
-                            <i onclick="hide()" class="bi bi-x-lg"></i>
+                <form id="form" class="row">
+                    <div class="title">
+                        <h1>Entre em contato conosco</h1>
+                        <i onclick="hide()" class="bi bi-x-lg"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="name">Nome (obrigatório)</label>
+                            <input type="text" name="Name" id="name" placeholder="exemplo" required>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="name">Nome (obrigatório)</label>
-                                <input type="text" name="Name" id="name" placeholder="exemplo" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="secondName">Sobrenome (obrigatório)</label>
-                                <input type="text" name="SecondName" id="secondName" placeholder="exemplo de sobrenome" required>
-                            </div>
+                        <div class="col-md-6">
+                            <label for="secondName">Sobrenome (obrigatório)</label>
+                            <input type="text" name="SecondName" id="secondName" placeholder="exemplo de sobrenome" required>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="email">E-mail (obrigatório)</label>
-                                <input type="text" name="email" id="email" placeholder="seuemailcompleto@exemplo.com" required>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="email">E-mail (obrigatório)</label>
+                            <input type="text" name="email" id="email" placeholder="seuemailcompleto@exemplo.com" required>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="tel">Telefone</label>
-                                <input type="tel" name="telefone" id="tel">
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="tel">Telefone</label>
+                            <input type="tel" name="telefone" id="tel">
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="assunto">Assunto (obrigatório)</label>
-                                <input type="text" name="assunto" id="assunto" placeholder="Fale sobre o serviço que você deseja que seja prestado por nós ou sobre uma sugestão" required>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="assunto">Assunto (obrigatório)</label>
+                            <input type="text" name="assunto" id="assunto" placeholder="Fale sobre o serviço que você deseja que seja prestado por nós ou sobre uma sugestão" required>
                         </div>
-                        <div class="row">
-                          <div class="col">
-                                <label for="Mensagem">Mensagem</label>
-                                <textarea name="" id="mensagem" placeholder="Digite aqui uma mensagem, observações ou sugestões"></textarea>
-                          </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="Mensagem">Mensagem</label>
+                            <textarea name="" id="mensagem" placeholder="Digite aqui uma mensagem, observações ou sugestões"></textarea>
                         </div>
-                        <div class="row">
-                            <div class="col d-flex">
-                                <button id="formBtn" type="submit" class="w-25 p-2">Enviar</button>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex">
+                            <button id="formBtn" type="submit" class="w-25 p-2">Enviar</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
                 <div class="row">
                     <div class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
                         <div class="contato-img">
-                            <img src="https://placehold.co/300x400" alt="" class="img-fluid">
+                            <img src="./imagens/equip_logo_final_300x400.png" alt="" class="img-fluid">
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="contato-text">
                             <h1 class="mb-3">Gostou de algo que viu?</h1>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates rem corrupti dolore, exercitationem tempora id non officiis vel laudantium beatae modi facilis quasi minima aspernatur, nulla iure porro possimus ad.</p>
+                            <p class="mb-5">Entre em contato conosco para saber mais sobre nossos serviços ou fazer um pedido personalizado que cabe dentro do seu bolso.</p>
                             <button onclick="show()">ENTRE EM CONTATO</button>
                         </div>
                     </div>
@@ -230,16 +228,22 @@
         <section id="sobre">
             <div class="container">
                 <div class="row text-center">
-                    <h2>Com mais de 32 anos de experiência na area</h2>
+                    <h2>Com mais de 30 anos de experiência na area</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-sm-12">
-                        <img src="https://placehold.co/500x400" alt="" class="img-fluid mb-3">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nam vero quod sit temporibus a tenetur rem aspernatur, incidunt inventore culpa deserunt dignissimos quo eveniet vel commodi maxime architecto tempora?</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt corrupti dolorem repellendus quo illo ducimus provident tenetur perspiciatis esse, ab excepturi ad nam, culpa sit voluptates inventore vero. Alias, dolorum.</p>
+                        <img src="./imagens/equip_logo_final_500x400.png" alt="" class="img-fluid mb-3">
+                        <p>Somos uma empresa especializada em oferecer soluções de qualidade para impressos e comunicação visual, sempre prezando pela satisfação de nossos clientes.<br>
+                            Contamos com ampla experiência na área comercial, maquinário de última geração para melhor atendê-lo, além de preços justos, com qualidade e agilidade na entrega.<br>                   
+                            Atuamos há mais de 32 anos no mercado, sempre inovando para melhor atender nossos clientes nos segmentos de impressão offset, digital e comunicação visual.
+                            <br>
+                            <br>
+                            Oferecemos uma ampla variedade de serviços, como: Banners, Blocos Comerciais, Cartões de Visita, Manuais, Catálogos, Livretos, Adesivos, Faixas, Flyers, Folders e muito mais em comunicação visual!<br>
+                            Disponibilizamos uma grande variedade de acabamentos para seus impressos, além de contar com uma equipe altamente qualificada para auxiliá-lo em qualquer projeto.
+                        </p>
                     </div>
                     <div class="col-lg-6 col-sm-12">
-                        <img src="https://placehold.co/600x650" alt="" class="img-fluid">
+                        <img src="./imagens/equip_logo_final_600x650.png" alt="" class="img-fluid">
                     </div>
                 </div>
                 <div class="row text-center">
@@ -247,13 +251,13 @@
                         <h2>Nossas Redes</h2>
                     </div>
                     <div class="col-12">
-                        <a href="#">
+                        <a href="https://www.instagram.com/chimbicapiracicaba/" target="_blank">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://wa.me/5519999890102" target="_blank">
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
@@ -263,22 +267,22 @@
         <section>
             <div class="container">
                 <div class="row text-center justify-content-center align-items-center">
-                    <h2>Oque dizem nossos clientes</h2>
+                    <h2 class="mb-4">Oque dizem nossos clientes</h2>
                 </div>
                 <div class="row d-flex justify-content-center align-items-center">
-                    <div id="corousel2" class="carousel slide w-75" data-bs-control="corousel">
+                    <div id="corousel2" class="carousel slide w-75 mb-3" data-bs-control="corousel">
                         <div class="carousel-inner">
                             <div class="carousel-item text-center active" data-bs-interval="2000">
-                                <h2>Lorem1 ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sint ullam harum illo assumenda deleniti inventore dignissimos, accusamus sed nam, aut dolorum itaque, asperiores aliquam adipisci eos veritatis unde officiis!</h2>
-                                <h4>José Rinshin</h4>
+                                <h2>Serviço Rápido e de Qualidade!</h2>
+                                <h4>Isaury Rodrigues</h4>
                             </div>
                             <div class="carousel-item text-center" data-bs-interval="2000">
-                                <h2>Lorem2 ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sint ullam harum illo assumenda deleniti inventore dignissimos, accusamus sed nam, aut dolorum itaque, asperiores aliquam adipisci eos veritatis unde officiis!</h2>
-                                <h4>Jonas David</h4>
+                                <h2>Exelente qualidade!</h2>
+                                <h4>Jose Luiz Colombi</h4>
                             </div>
                             <div class="carousel-item text-center" data-bs-interval="2000">
-                                <h2>Lorem3 ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sint ullam harum illo assumenda deleniti inventore dignissimos, accusamus sed nam, aut dolorum itaque, asperiores aliquam adipisci eos veritatis unde officiis!</h2>
-                                <h4>Felipe Tozzi</h4>
+                                <h2>Uma gráfica muito boa, de exelente atendimento.</h2>
+                                <h4>Yuri Vitti</h4>
                             </div>
                         </div>
                     </div>
@@ -298,7 +302,7 @@
     </div>
     <footer>
         <h1>&copyDireitos Reservados para Gráfica Barão</h1>
-        <h2>Desenvolvido por <a href="#">SkyLink'd</a></h2>
+        <h2>Desenvolvido por <a href="https://skylinkd.com.br/">SkyLink'd</a></h2>
     </footer>
     <!-- scripts jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -395,27 +399,26 @@
                     const secondName1 = $('#secondNameService').val();
                     const emailService = $('#emailService').val();
 
-                    let texto = `*Nova Solicitação*
-                    Olá meu nome é ${name1} ${secondName1} meu email é ${emailService}, e gostaria de solicitar o serviço de `;
+                    let texto = `
+                    *Nova Solicitação*
+Olá meu nome é ${name1} ${secondName1} meu email é ${emailService}, e gostaria de solicitar o serviço de `;
 
                     switch (servicosOp) {
                         case 1:
-                            texto += "impressão.";
+                            texto += "Cartões.";
                             break;
                         case 2:
-                            texto += "fotografia.";
+                            texto += "Catálogos.";
                             break;
                         case 3:
-                            texto += "vídeo.";
+                            texto += "Folders.";
                             break;
                         case 4:
-                            texto += "animação.";
+                            texto += "Faixas.";
                             break;
-                        default:
-                            texto += "desconhecido.";
                     }
 
-                    const link = 'https://wa.me/5519993254004?text=' + encodeURIComponent(texto);
+                    const link = 'https://wa.me/5519999890102?text=' + encodeURIComponent(texto);
                     window.open(link, '_blank');
                 }
             });
@@ -440,15 +443,15 @@
                     let texto = 
                     `
                     *Nova Mensagem*
-                    Nome: ${name} ${secondName}
-                    Email: ${email}
-                    Telefone: ${tel}
-                    Assunto: ${assunto}
-                    Mensagem: ${message}
+Nome: ${name} ${secondName}
+Email: ${email}
+Telefone: ${tel}
+Assunto: ${assunto}
+Mensagem: ${message}
                     `;
 
                     // envio para whatsapp
-                    const link = 'https://wa.me/5519993254004?text=' + encodeURIComponent(texto);
+                    const link = 'https://wa.me/5519999890102?text=' + encodeURIComponent(texto);
                     window.open(link, '_blank');
                 }
             })
@@ -456,3 +459,4 @@
     </script>
 </body>
 </html>
+

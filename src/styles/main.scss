@@ -135,8 +135,8 @@ div.background{
     section:nth-of-type(1){
         div{
             button{
-                height: 80px;
-                width: 80px;
+                height: 70px;
+                width: 70px;
                 background-color: variaveis.$cor2;
                 border-radius: 50%;
                 span{
@@ -147,7 +147,7 @@ div.background{
 
             div.carousel{
                 height: auto;
-                width: 60% !important;
+                width: 75% !important;
                 div.carousel-inner{
                     .carousel-item {
                         img{
@@ -169,12 +169,43 @@ div.background{
                 }
             }
         }
+
+        @media (max-width: 768px) {
+            div{
+                button{
+                    height: 40px;
+                    width: 40px;
+
+                    span{
+                        height: 30%;
+                        width: 30%;
+                    }
+                }
+
+                div.carousel{
+                    height: auto;
+                    width: 100% !important;
+
+                    div.carousel-inner{
+                        .carousel-item {
+                            div.carousel-caption{
+                                width: 100%;
+                                h2{
+                                    @include titleH4();
+                                    color: variaveis.$cor1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
     }
 
     section:nth-of-type(2){
         height: max-content;
         background-color: variaveis.$cor4;
-        padding: 3rem 1.5rem;
         div{
             height: 100%;
             padding: 20px;
@@ -191,7 +222,8 @@ div.background{
                 div{
                     margin-bottom: 1.5rem;
                     div.card{
-                        min-height: 100%;
+                        height: max-content;
+                        min-height: 489.73px;
                         div.card-header{
                             border: none;
                             background-color: variaveis.$cor1;
@@ -230,7 +262,6 @@ div.background{
                         height: max-content;
                         width: 100%;
                         div.col-12{
-                            // width: 100%;
                             label{
                                  margin-bottom: 4px;
                                 font-weight: bold;
@@ -274,55 +305,80 @@ div.background{
                 }
             }
         }
-
-        @media (max-width: 992px) {
-            div.row:nth-of-type(2) {
-                flex-direction: column;
-            }
-
-            div, form#formWindow {
-                width: 100% !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            padding: 2rem 1rem;
-        
-            div.row:nth-of-type(1) h2 {
-                    font-size: 2rem !important;
-            }
-      
-            div.row:nth-of-type(2) .card-body h4 {
-                font-size: 1.5rem !important;
-            }
-        }
-
-        @media (max-width: 576px) {
-            padding: 1rem 0.5rem;
-        
-            div.row:nth-of-type(2) {
-                gap: 1rem;
-            }
-      
-            form#formWindow input {
-                width: 100%;
-            }
-        }
     }
 
     section:nth-of-type(3){
-    min-height: 100vh;
-    background-color: variaveis.$cor3;
-    padding: 3rem 1.5rem;
-    position: relative;
-    overflow: hidden;
+        height: 100vh;
+        background-color: variaveis.$cor3;
 
         div.container{
+            height: max-content !important;
             position: relative;
-            z-index: 1;
-            height: 100%;
 
-            div.row:nth-of-type(2){
+            form.row{
+                height: max-content;
+                width: 50%;
+                display: none;
+                position: absolute;
+                padding: 16px;
+                background-color: whitesmoke;
+                z-index: 2;
+
+                div.title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    h1{
+                        @include titleH3();
+                        font-size: 2em;
+                        color: variaveis.$cor2; 
+                    }
+
+                    i{
+                        font-size: 2.5em;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                div.row{
+                    div.col, div.col-md-6{
+                        display: flex;
+                        flex-direction: column;
+                        label{
+                            margin-bottom: 4px;
+                            font-weight: bold;
+                            @include p2();
+                        }
+
+                        input, textarea{
+                            padding: 6px;
+                            @include p3();
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                    
+                        textarea{
+                            resize: none;
+                            height: 70px;
+                        }
+
+                        button{
+                            @include p3();
+                            @include button();
+                            width: 100%;
+                        }
+                    } 
+                }
+            }
+
+            div.row{
                 min-height: 100%;
                 z-index: 1;
                 position: relative;
@@ -353,117 +409,6 @@ div.background{
                         }
                     }
                 }
-            }
-
-            div.row:nth-of-type(1){
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 10;
-
-                form{
-                    display: none;
-                    background-color: whitesmoke;
-                    width: 35%;
-                    padding: 30px;
-                    font-size: 0.8em;
-                    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-                    border-radius: 8px;
-
-                    div.title{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-bottom: 20px;
-
-                        h1{
-                            @include titleH3();
-                            font-size: 2em;
-                            color: variaveis.$cor2; 
-                        }
-
-                        i{
-                            font-size: 2.5em;
-                            cursor: pointer;
-                            transition: all .3s ease-in-out;
-
-                            &:hover{
-                                transform: scale(1.2);
-                            }
-                        }
-                    }
-
-                    label{
-                        margin-bottom: 4px;
-                        font-weight: bold;
-                        @include p2();
-                    }
-
-                    input, textarea{
-                        padding: 6px;
-                        @include p3();
-                        width: 100%;
-                        margin-bottom: 10px;
-                    }
-
-                    textarea{
-                        resize: none;
-                        height: 70px;
-                    }
-
-                    div.col, div.col-md-6{
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    div.row{
-                        height: max-content;
-                        margin-bottom: 10px;
-                    }
-
-                    button{
-                        @include p3();
-                        @include button();
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        @media (max-width: 992px) {
-            min-height: auto;
-
-            div.row:nth-of-type(2) {
-                flex-direction: column;
-
-                .col-lg-6 {
-                    width: 100%;
-                    text-align: center;
-
-                    .contato-text {
-                        align-items: center;
-                    }
-                }
-            }
-
-            div.row:nth-of-type(1) form {
-                width: 90%;
-                position: relative;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .contato-text h1 {
-                font-size: 1.8rem !important;
-            }
-
-            .contato-text p {
-                font-size: 1rem !important;
-            }
-
-            .contato-text button {
-                width: 100%;
             }
         }
     }
@@ -558,13 +503,14 @@ div.background{
                 div.carousel-btn-2{
                     flex-direction: row;
                     justify-content: center;
-                    gap: 1rem;
+                    gap: 2rem;
                     div{
                         height: 100%;
                         width: auto;
+                        gap: 2rem;
                         button{
-                            height: 60px;
-                            width: 60px;
+                            height: 50px;
+                            width: 50px;
                             background-color: variaveis.$cor2;
                             border-radius: 50%;
                             span{

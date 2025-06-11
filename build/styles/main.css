@@ -72,8 +72,8 @@ div.background section {
   height: max-content;
 }
 div.background section:nth-of-type(1) div button {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   background-color: #000;
   border-radius: 50%;
 }
@@ -83,7 +83,7 @@ div.background section:nth-of-type(1) div button span {
 }
 div.background section:nth-of-type(1) div div.carousel {
   height: auto;
-  width: 60% !important;
+  width: 75% !important;
 }
 div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carousel-item img {
   filter: brightness(0.7);
@@ -100,6 +100,30 @@ div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carou
   font-weight: 400;
   font-size: 2.8rem !important;
   color: #fff;
+}
+@media (max-width: 768px) {
+  div.background section:nth-of-type(1) div button {
+    height: 40px;
+    width: 40px;
+  }
+  div.background section:nth-of-type(1) div button span {
+    height: 30%;
+    width: 30%;
+  }
+  div.background section:nth-of-type(1) div div.carousel {
+    height: auto;
+    width: 100% !important;
+  }
+  div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carousel-item div.carousel-caption {
+    width: 100%;
+  }
+  div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carousel-item div.carousel-caption h2 {
+    font-family: "Space Mono", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    font-size: 1.6rem !important;
+    color: #fff;
+  }
 }
 div.background section:nth-of-type(2) {
   height: max-content;
@@ -126,7 +150,8 @@ div.background section:nth-of-type(2) div div.row:nth-of-type(2) div {
   margin-bottom: 1.5rem;
 }
 div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card {
-  min-height: 100%;
+  height: max-content;
+  min-height: 489.73px;
 }
 div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-header {
   border: none;
@@ -224,66 +249,25 @@ div.background section:nth-of-type(3) {
   background-color: #083c75;
 }
 div.background section:nth-of-type(3) div.container {
-  height: 100%;
+  height: max-content !important;
+  position: relative;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) {
-  height: 100%;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 {
-  height: inherit;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text {
-  color: #fff;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text h1 {
-  font-family: "Space Mono", sans-serif;
-  font-size: 4rem;
-  font-weight: 400;
-  font-size: 2.8rem !important;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text p {
-  font-family: "Abel", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-size: 1.2rem !important;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(2) div.col-lg-6 div.contato-text button {
-  height: 50px;
-  width: 200px;
-  border: none;
-  padding: 15px;
-  border-radius: 25px;
-  background-color: #fff;
-  font-family: "Abel", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-size: 1rem !important;
-  color: #000;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) {
-  width: 100%;
-  position: absolute;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form {
-  display: none;
-  background-color: whitesmoke;
-  width: 35%;
-  padding: 30px;
-  font-size: 0.8em;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form::before {
-  height: 100vh;
-  width: 100%;
-  background-color: #000;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title {
+div.background section:nth-of-type(3) div.container form.row {
   height: max-content;
+  width: 50%;
+  display: none;
+  position: absolute;
+  padding: 16px;
+  background-color: whitesmoke;
+  z-index: 2;
+}
+div.background section:nth-of-type(3) div.container form.row div.title {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title h1 {
+div.background section:nth-of-type(3) div.container form.row div.title h1 {
   font-family: "Space Mono", sans-serif;
   font-size: 4rem;
   font-weight: 400;
@@ -291,15 +275,19 @@ div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form 
   font-size: 2em;
   color: #000;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title i {
+div.background section:nth-of-type(3) div.container form.row div.title i {
   font-size: 2.5em;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.title i:hover {
+div.background section:nth-of-type(3) div.container form.row div.title i:hover {
   transform: scale(1.2);
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form label {
+div.background section:nth-of-type(3) div.container form.row div.row div.col, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+div.background section:nth-of-type(3) div.container form.row div.row div.col label, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 label {
   margin-bottom: 4px;
   font-weight: bold;
   font-family: "Abel", sans-serif;
@@ -307,32 +295,20 @@ div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form 
   font-weight: 600;
   font-size: 1.2rem !important;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form input {
+div.background section:nth-of-type(3) div.container form.row div.row div.col input, div.background section:nth-of-type(3) div.container form.row div.row div.col textarea, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 input, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 textarea {
   padding: 6px;
   font-family: "Abel", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   font-size: 1rem !important;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form textarea {
-  font-family: "Abel", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-size: 1rem !important;
-  resize: none;
-  height: 35.19px;
-  padding: 6px;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.col, div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.col-md-6 {
-  display: flex;
-  flex-direction: column;
-  margin-block-end: 10px;
-}
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form div.row {
-  height: max-content;
+  width: 100%;
   margin-bottom: 10px;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form button {
+div.background section:nth-of-type(3) div.container form.row div.row div.col textarea, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 textarea {
+  resize: none;
+  height: 70px;
+}
+div.background section:nth-of-type(3) div.container form.row div.row div.col button, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 button {
   font-family: "Abel", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
@@ -344,11 +320,48 @@ div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form 
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  width: 100%;
 }
-div.background section:nth-of-type(3) div.container div.row:nth-of-type(1) form button:hover {
+div.background section:nth-of-type(3) div.container form.row div.row div.col button:hover, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 button:hover {
   transition: all 0.3s ease-in-out;
   background-color: whitesmoke;
   color: #16161d;
+}
+div.background section:nth-of-type(3) div.container div.row {
+  min-height: 100%;
+  z-index: 1;
+  position: relative;
+}
+div.background section:nth-of-type(3) div.container div.row div.col-lg-6 {
+  height: 100%;
+}
+div.background section:nth-of-type(3) div.container div.row div.col-lg-6 div.contato-text {
+  color: #fff;
+}
+div.background section:nth-of-type(3) div.container div.row div.col-lg-6 div.contato-text h1 {
+  font-family: "Space Mono", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem !important;
+}
+div.background section:nth-of-type(3) div.container div.row div.col-lg-6 div.contato-text p {
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+div.background section:nth-of-type(3) div.container div.row div.col-lg-6 div.contato-text button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: #fff;
+  font-family: "Abel", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1rem !important;
+  color: #000;
 }
 div.background section:nth-of-type(4) {
   background-color: #fff;
@@ -400,14 +413,16 @@ div.background section:nth-of-type(4) div.container div.row:nth-of-type(3) div.c
   transform: scale(1.2);
 }
 div.background section:nth-of-type(5) {
-  height: 50vh;
+  height: auto;
+  padding: 3rem 1.5rem;
   background-color: #083c75;
 }
 div.background section:nth-of-type(5) div.container {
-  height: 100%;
+  height: auto;
 }
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(1) {
   height: 20%;
+  text-align: center;
 }
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(1) h2 {
   font-family: "Space Mono", sans-serif;
@@ -418,6 +433,11 @@ div.background section:nth-of-type(5) div.container div.row:nth-of-type(1) h2 {
 }
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) {
   height: 80%;
+  flex-direction: column;
+  align-items: center;
+}
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel {
+  width: 100%;
 }
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel div.carousel-inner div.carousel-item h2 {
   font-family: "Space Mono", sans-serif;
@@ -432,19 +452,36 @@ div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.c
   font-weight: 600;
   color: #fff;
 }
+div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 {
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 div {
   height: 100%;
-  width: 15%;
+  width: auto;
+  gap: 2rem;
 }
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 div button {
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   background-color: #000;
   border-radius: 50%;
 }
 div.background section:nth-of-type(5) div.container div.row:nth-of-type(2) div.carousel-btn-2 div button span {
   height: 50%;
   width: 50%;
+}
+@media (max-width: 768px) {
+  div.background section:nth-of-type(5) div.row:nth-of-type(1) h2 {
+    font-size: 1.8rem !important;
+  }
+  div.background section:nth-of-type(5) div.carousel-item h2 {
+    font-size: 1.4rem !important;
+  }
+  div.background section:nth-of-type(5) div.carousel-item h4 {
+    font-size: 1rem !important;
+  }
 }
 
 footer {
