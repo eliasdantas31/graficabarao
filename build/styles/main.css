@@ -14,17 +14,29 @@ label.error {
   color: red;
 }
 
+.gif {
+  position: fixed;
+  right: 1px;
+  bottom: 1px;
+  z-index: 1000;
+}
+
+.gif a img {
+  height: 125px;
+  width: auto;
+}
+
 header {
   position: sticky;
   top: 0;
   left: 0;
   z-index: 999;
-  backdrop-filter: blur(8px);
+  background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 header div.navbar div.container img {
   height: auto;
-  width: 200px;
+  width: 150px;
 }
 header div.navbar div.container button {
   background-color: #000;
@@ -59,17 +71,11 @@ header div.navbar div.container nav .nav-pills .nav-link.active a {
 div.background {
   background-color: #083c75;
 }
-div.background div.title {
-  height: 150px;
-}
-div.background div.title h1 {
-  font-family: "Space Mono", sans-serif;
-  font-size: 4rem;
-  font-weight: 400;
-  color: #fff;
-}
 div.background section {
   height: max-content;
+}
+div.background section:nth-of-type(1) {
+  height: auto;
 }
 div.background section:nth-of-type(1) div button {
   height: 70px;
@@ -102,9 +108,12 @@ div.background section:nth-of-type(1) div div.carousel div.carousel-inner .carou
   color: #fff;
 }
 @media (max-width: 768px) {
+  div.background section:nth-of-type(1) div.title h1 {
+    font-size: 3rem !important;
+  }
   div.background section:nth-of-type(1) div button {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
   }
   div.background section:nth-of-type(1) div button span {
     height: 30%;
@@ -180,69 +189,13 @@ div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card di
   font-weight: 600;
   font-size: 1.2rem !important;
 }
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-body button {
+div.background section:nth-of-type(2) div div.row:nth-of-type(2) div div.card div.card-body button a {
   font-family: "Abel", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   font-size: 1.2rem !important;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow {
-  display: none;
-  background-color: whitesmoke;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row {
-  height: max-content;
-  width: 100%;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col-12 label {
-  margin-bottom: 4px;
-  font-weight: bold;
-  font-family: "Abel", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-size: 1.2rem !important;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col-12 input {
-  width: 50%;
-  font-family: "Abel", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-size: 1rem !important;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col button {
-  font-family: "Abel", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  font-size: 1rem !important;
-  background-color: #16161d;
-  color: whitesmoke;
-  border: 1px solid #16161d;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.row div.col button:hover {
-  transition: all 0.3s ease-in-out;
-  background-color: whitesmoke;
-  color: #16161d;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow h1 {
-  width: max-content;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow i {
-  width: max-content;
-  font-size: 2.5em;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-div.background section:nth-of-type(2) div div.row:nth-of-type(2) form#formWindow div.titleWindow i:hover {
-  transform: scale(1.2);
+  color: #fff;
+  text-decoration: none;
 }
 div.background section:nth-of-type(3) {
   height: 100vh;
@@ -254,7 +207,7 @@ div.background section:nth-of-type(3) div.container {
 }
 div.background section:nth-of-type(3) div.container form.row {
   height: max-content;
-  width: 50%;
+  width: 65%;
   display: none;
   position: absolute;
   padding: 16px;
@@ -283,11 +236,13 @@ div.background section:nth-of-type(3) div.container form.row div.title i {
 div.background section:nth-of-type(3) div.container form.row div.title i:hover {
   transform: scale(1.2);
 }
-div.background section:nth-of-type(3) div.container form.row div.row div.col, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 {
+div.background section:nth-of-type(3) div.container form.row div.row div.col,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 {
   display: flex;
   flex-direction: column;
 }
-div.background section:nth-of-type(3) div.container form.row div.row div.col label, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 label {
+div.background section:nth-of-type(3) div.container form.row div.row div.col label,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 label {
   margin-bottom: 4px;
   font-weight: bold;
   font-family: "Abel", sans-serif;
@@ -295,7 +250,10 @@ div.background section:nth-of-type(3) div.container form.row div.row div.col lab
   font-weight: 600;
   font-size: 1.2rem !important;
 }
-div.background section:nth-of-type(3) div.container form.row div.row div.col input, div.background section:nth-of-type(3) div.container form.row div.row div.col textarea, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 input, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 textarea {
+div.background section:nth-of-type(3) div.container form.row div.row div.col input,
+div.background section:nth-of-type(3) div.container form.row div.row div.col textarea,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 input,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 textarea {
   padding: 6px;
   font-family: "Abel", sans-serif;
   font-size: 1.4rem;
@@ -304,11 +262,13 @@ div.background section:nth-of-type(3) div.container form.row div.row div.col inp
   width: 100%;
   margin-bottom: 10px;
 }
-div.background section:nth-of-type(3) div.container form.row div.row div.col textarea, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 textarea {
+div.background section:nth-of-type(3) div.container form.row div.row div.col textarea,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 textarea {
   resize: none;
   height: 70px;
 }
-div.background section:nth-of-type(3) div.container form.row div.row div.col button, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 button {
+div.background section:nth-of-type(3) div.container form.row div.row div.col button,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 button {
   font-family: "Abel", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
@@ -322,10 +282,16 @@ div.background section:nth-of-type(3) div.container form.row div.row div.col but
   cursor: pointer;
   width: 100%;
 }
-div.background section:nth-of-type(3) div.container form.row div.row div.col button:hover, div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 button:hover {
+div.background section:nth-of-type(3) div.container form.row div.row div.col button:hover,
+div.background section:nth-of-type(3) div.container form.row div.row div.col-md-6 button:hover {
   transition: all 0.3s ease-in-out;
   background-color: whitesmoke;
   color: #16161d;
+}
+@media (max-width: 1025px) {
+  div.background section:nth-of-type(3) div.container form.row {
+    width: 100% !important;
+  }
 }
 div.background section:nth-of-type(3) div.container div.row {
   min-height: 100%;
@@ -367,7 +333,7 @@ div.background section:nth-of-type(4) {
   background-color: #fff;
 }
 div.background section:nth-of-type(4) div.container div.row:nth-of-type(1) {
-  height: 100px;
+  height: max-content;
   justify-content: center;
   align-items: center;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,16 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
+
 <body>
+    <div class="gif">
+        <a href="https://wa.me/5519999890102">
+            <img src="./imagens/icone-do-design-whatsapp.png" class="animate__animated animate__bounce animate__infinite animate__slower">
+        </a>
+    </div>
     <header id="header">
         <div class="navbar navbar-expand-lg">
             <div class="container">
@@ -36,21 +45,10 @@
         </div>
     </header>
     <div class="background" data-bs-spy="scroll" data-bs-target="#menu">
-        <div class="title d-flex justify-content-center align-items-center">
-            <h1 class="text-center">Gráfica Barão</h1>
-            <dotlottie-player
-                src="https://lottie.host/5deec3d8-0b01-45ef-acfc-fa592cac1677/DVGOlFvvXN.lottie"
-                background="transparent"
-                speed="1"
-                style="width: auto; height: 150px"
-                loop
-                autoplay
-                class="gif"
-            ></dotlottie-player>
-        </div>
-        <section id="home" class="mt-4">
-            <div class="d-flex justify-content-evenly align-items-center my-4">
-                <button class="carousel-control-prev position-relative" type="button" data-bs-target="#corousel" data-bs-slide="prev">
+        <section id="home" class="py-3" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <button class="carousel-control-prev position-relative" type="button" data-bs-target="#corousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
                 <div id="corousel" class="carousel carousel-fade slide w-100" data-bs-rise="carousel">
@@ -75,90 +73,70 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-next position-relative" type="button" data-bs-target="#corousel" data-bs-slide="next">
+                <button class="carousel-control-next position-relative" type="button" data-bs-target="#corousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
         </section>
         <section id="servicos">
             <div class="d-flex flex-column justify-content-center align-items-center p-0">
-                <div class="row text-center p-2">
+                <div class="row text-center p-2" data-aos="fade-down" data-aos-duration="1000">
                     <h2>Nossos Serviços</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="500">
                         <div class="card">
                             <div class="card-header">
                                 <i class="bi bi-card-text"></i>
                             </div>
                             <div class="card-body">
                                 <h4>Cartões</h4>
-                                <p>Produção de cartões profissionais, com design personalizado e alta qualidade de impressão, ideal para fortalecer a identidade visual da sua empresa.</p>
-                                <button id="ser1"; class="btn btn-dark">Solicitar serviço</button>
+                                <p>Produção de cartões profissionais, com design personalizado e alta qualidade de
+                                    impressão, ideal para fortalecer a identidade visual da sua empresa.</p>
+                                <button id="ser1" class="btn btn-dark"><a href="https://wa.me/5519999890102">Solicitar serviço</a></button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card">
                             <div class="card-header">
                                 <i class="bi bi-book"></i>
                             </div>
                             <div class="card-body">
                                 <h4>Catálogos</h4>
-                                <p>Desenvolvimento e impressão de catálogos completos, perfeitos para apresentar seus produtos e serviços de forma organizada e atrativa.</p>
-                                <button id="ser2"; class="btn btn-dark">Solicitar serviço</button>
+                                <p>Desenvolvimento e impressão de catálogos completos, perfeitos para apresentar seus
+                                    produtos e serviços de forma organizada e atrativa.</p>
+                                <button id="ser2" class="btn btn-dark"><a href="https://wa.me/5519999890102">Solicitar serviço</a></button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1500">
                         <div class="card">
                             <div class="card-header">
                                 <i class="bi bi-card-image"></i>
                             </div>
                             <div class="card-body">
                                 <h4>Folders</h4>
-                                <p>Criação e impressão de folders informativos, ideais para divulgação de campanhas, eventos ou produtos, com acabamento profissional e qualidade.</p>
-                                <button id="ser3"; class="btn btn-dark">Solicitar serviço</button>
+                                <p>Criação e impressão de folders informativos, ideais para divulgação de campanhas,
+                                    eventos ou produtos, com acabamento profissional e qualidade.</p>
+                                <button id="ser3" class="btn btn-dark"><a href="https://wa.me/5519999890102">Solicitar serviço</a></button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
                         <div class="card">
                             <div class="card-header">
                                 <i class="bi bi-bookmark"></i>
                             </div>
                             <div class="card-body">
                                 <h4>Faixas</h4>
-                                <p>Produção de faixas promocionais e institucionais, com materiais resistentes e impressão de alta qualidade, para destacar sua marca em qualquer ambiente.</p>
-                                <button id="ser4"; class="btn btn-dark">Solicitar serviço</button>
+                                <p>Produção de faixas promocionais e institucionais, com materiais resistentes e
+                                    impressão de alta qualidade, para destacar sua marca aonde for.</p>
+                                <button id="ser4" class="btn btn-dark"><a href="https://wa.me/5519999890102">Solicitar serviço</a></button>
                             </div>
                         </div>
                     </div>
-                    <form id="formWindow" class="container w-50 p-4">
-                        <div class="row m-0 p-0 titleWindow">
-                            <h1>Informe o seu nome e email</h1>
-                             <i onclick="hide1()" class="bi bi-x-lg"></i>
-                        </div>
-                        <div class="row m-0 p-0">  
-                            <div class="col-lg-6 d-flex flex-column">
-                                <label for="nameService">Nome(obrigatório)</label>
-                                <input class="p-1" type="text" name="nameService" id="nameService" placeholder="exemplo" required>
-                            </div>
-                            <div class="col-lg-6 d-flex flex-column">
-                                <label for="secondNameService">Sobrenome(obrigatório)</label>
-                                <input class="p-1" type="text" name="secondNameService" id="secondNameService" placeholder="exemplo de sobrenome" required> 
-                            </div>
-                            <div class="col-lg-12 d-flex flex-column">
-                                <label for="emailService">Email(obrigatório)</label>
-                                <input class="p-1" type="email" name="emailService" id="emailService" placeholder="exemplo de email" required>
-                            </div>
-                        </div>
-                        <div class="row m-0 p-0">
-                            <div class="col d-flex">
-                                <button id="formBtn1" type="submit" class="w-25 p-2">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>
@@ -176,13 +154,15 @@
                         </div>
                         <div class="col-md-6">
                             <label for="secondName">Sobrenome (obrigatório)</label>
-                            <input type="text" name="SecondName" id="secondName" placeholder="exemplo de sobrenome" required>
+                            <input type="text" name="SecondName" id="secondName" placeholder="exemplo de sobrenome"
+                                required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="email">E-mail (obrigatório)</label>
-                            <input type="text" name="email" id="email" placeholder="seuemailcompleto@exemplo.com" required>
+                            <input type="text" name="email" id="email" placeholder="seuemailcompleto@exemplo.com"
+                                required>
                         </div>
                     </div>
                     <div class="row">
@@ -194,13 +174,15 @@
                     <div class="row">
                         <div class="col">
                             <label for="assunto">Assunto (obrigatório)</label>
-                            <input type="text" name="assunto" id="assunto" placeholder="Fale sobre o serviço que você deseja que seja prestado por nós ou sobre uma sugestão" required>
+                            <input type="text" name="assunto" id="assunto"
+                                placeholder="Fale sobre o serviço que você deseja que seja prestado por nós ou sobre uma sugestão" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <label for="Mensagem">Mensagem</label>
-                            <textarea name="" id="mensagem" placeholder="Digite aqui uma mensagem, observações ou sugestões"></textarea>
+                            <textarea name="" id="mensagem"
+                                placeholder="Digite aqui uma mensagem, observações ou sugestões"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -209,7 +191,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="row">
+                <div class="row" data-aos="fade-down" data-aos-duration="1000">
                     <div class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
                         <div class="contato-img">
                             <img src="./imagens/equip_logo_final_300x400.png" alt="" class="img-fluid">
@@ -218,7 +200,8 @@
                     <div class="col-lg-6 col-sm-12 d-flex flex-column justify-content-center align-items-start">
                         <div class="contato-text">
                             <h1 class="mb-3">Gostou de algo que viu?</h1>
-                            <p class="mb-5">Entre em contato conosco para saber mais sobre nossos serviços ou fazer um pedido personalizado que cabe dentro do seu bolso.</p>
+                            <p class="mb-5">Entre em contato conosco para saber mais sobre nossos serviços ou fazer um
+                                pedido personalizado que cabe dentro do seu bolso.</p>
                             <button onclick="show()">ENTRE EM CONTATO</button>
                         </div>
                     </div>
@@ -227,19 +210,25 @@
         </section>
         <section id="sobre">
             <div class="container">
-                <div class="row text-center">
+                <div class="row text-center" data-aos="fade-down" data-aos-duration="1000">
                     <h2>Com mais de 30 anos de experiência na area</h2>
                 </div>
-                <div class="row">
+                <div class="row" data-aos="fade-up" data-aos-duration="1000">
                     <div class="col-lg-6 col-sm-12">
                         <img src="./imagens/equip_logo_final_500x400.png" alt="" class="img-fluid mb-3">
-                        <p>Somos uma empresa especializada em oferecer soluções de qualidade para impressos e comunicação visual, sempre prezando pela satisfação de nossos clientes.<br>
-                            Contamos com ampla experiência na área comercial, maquinário de última geração para melhor atendê-lo, além de preços justos, com qualidade e agilidade na entrega.<br>                   
-                            Atuamos há mais de 32 anos no mercado, sempre inovando para melhor atender nossos clientes nos segmentos de impressão offset, digital e comunicação visual.
+                        <p>Somos uma empresa especializada em oferecer soluções de qualidade para impressos e
+                            comunicação visual, sempre prezando pela satisfação de nossos clientes.<br>
+                            Contamos com ampla experiência na área comercial, maquinário de última geração para melhor
+                            atendê-lo, além de preços justos, com qualidade e agilidade na entrega.<br>
+                            Atuamos há mais de 32 anos no mercado, sempre inovando para melhor atender nossos clientes
+                            nos segmentos de impressão offset, digital e comunicação visual.
                             <br>
                             <br>
-                            Oferecemos uma ampla variedade de serviços, como: Banners, Blocos Comerciais, Cartões de Visita, Manuais, Catálogos, Livretos, Adesivos, Faixas, Flyers, Folders e muito mais em comunicação visual!<br>
-                            Disponibilizamos uma grande variedade de acabamentos para seus impressos, além de contar com uma equipe altamente qualificada para auxiliá-lo em qualquer projeto.
+                            Oferecemos uma ampla variedade de serviços, como: Banners, Blocos Comerciais, Cartões de
+                            Visita, Manuais, Catálogos, Livretos, Adesivos, Faixas, Flyers, Folders e muito mais em
+                            comunicação visual!<br>
+                            Disponibilizamos uma grande variedade de acabamentos para seus impressos, além de contar com
+                            uma equipe altamente qualificada para auxiliá-lo em qualquer projeto.
                         </p>
                     </div>
                     <div class="col-lg-6 col-sm-12">
@@ -247,17 +236,20 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center" data-aos="fade-down" data-aos-duration="1000">
                         <h2>Nossas Redes</h2>
                     </div>
                     <div class="col-12">
-                        <a href="https://www.instagram.com/chimbicapiracicaba/" target="_blank">
+                        <a href="https://www.instagram.com/chimbicapiracicaba/" target="_blank" data-aos="fade-up"
+                            data-aos-duration="1000">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://www.facebook.com/chimbica.piracicaba/?locale=pt_BR" target="_blank"
+                            data-aos="fade-up" data-aos-duration="1000">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <a href="https://wa.me/5519999890102" target="_blank">
+                        <a href="https://wa.me/5519999890102" target="_blank" data-aos="fade-up"
+                            data-aos-duration="1000">
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     </div>
@@ -288,10 +280,12 @@
                     </div>
                     <div class="carousel-btn-2 d-flex justify-content-center align-items-center">
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="carousel-control-prev position-relative" type="button" data-bs-target="#corousel2" data-bs-slide="prev">
+                            <button class="carousel-control-prev position-relative" type="button"
+                                data-bs-target="#corousel2" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </button>
-                            <button class="carousel-control-next position-relative" type="button" data-bs-target="#corousel2" data-bs-slide="next">
+                            <button class="carousel-control-next position-relative" type="button"
+                                data-bs-target="#corousel2" data-bs-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </button>
                         </div>
@@ -315,7 +309,10 @@
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
     <!-- script base -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
+
         function show() {
             document.getElementById("form").style.display = "block";
         }
@@ -324,11 +321,7 @@
             document.getElementById("form").style.display = "none";
         }
 
-        function hide1() {
-            document.getElementById("formWindow").style.display = "none";
-        }
-
-        $(document).ready(function() { 
+        $(document).ready(function () {
             $("#tel").mask("(00) 00000-0000",
                 {
                     placeholder: "(00) 00000-0000"
@@ -339,7 +332,7 @@
                 rules: {
                     name: {
                         required: true
-                    },  
+                    },
                     email: {
                         required: true,
                         email: true
@@ -350,80 +343,7 @@
                 }
             });
 
-            $("#formWindow").validate({
-                rules: {
-                    nameService: {
-                        required: true
-                    },
-                    secondNameService: {
-                        required: true
-                    },
-                    emailService: {
-                        required: true,
-                        email: true
-                    }
-                }
-            });
-
-            let servicosOp = 0;
-
-            $("#ser1").on('click', function(){
-                document.getElementById("formWindow").style.display = "block";
-                servicosOp = 1;
-            })
-
-            $("#ser2").on('click', function(){
-                document.getElementById("formWindow").style.display = "block";
-                servicosOp = 2;
-            })
-
-            $("#ser3").on('click', function(){
-                document.getElementById("formWindow").style.display = "block";
-                servicosOp = 3;
-            })
-
-            $("#ser4").on('click', function(){
-                document.getElementById("formWindow").style.display = "block";
-                servicosOp = 4;
-            })
-
-            $("#formBtn1").on('click', function(e) {
-                e.preventDefault();
-
-                const name1 = $('#nameService').val();
-                const secondName1 = $('#secondNameService').val();
-                const emailService = $('#emailService').val();
-
-                if($("#formWindow").valid()) {
-                    const name1 = $('#nameService').val();
-                    const secondName1 = $('#secondNameService').val();
-                    const emailService = $('#emailService').val();
-
-                    let texto = `
-                    *Nova Solicitação*
-Olá meu nome é ${name1} ${secondName1} meu email é ${emailService}, e gostaria de solicitar o serviço de `;
-
-                    switch (servicosOp) {
-                        case 1:
-                            texto += "Cartões.";
-                            break;
-                        case 2:
-                            texto += "Catálogos.";
-                            break;
-                        case 3:
-                            texto += "Folders.";
-                            break;
-                        case 4:
-                            texto += "Faixas.";
-                            break;
-                    }
-
-                    const link = 'https://wa.me/5519999890102?text=' + encodeURIComponent(texto);
-                    window.open(link, '_blank');
-                }
-            });
-
-            $("#formBtn").on('click', function(e) {
+            $("#formBtn").on('click', function (e) {
                 e.preventDefault();
 
 
@@ -439,9 +359,8 @@ Olá meu nome é ${name1} ${secondName1} meu email é ${emailService}, e gostari
                     const message = $('#mensagem').val();
 
                     // montagem da mensagem
-                    
-                    let texto = 
-                    `
+                    let texto =
+                        `
                     *Nova Mensagem*
 Nome: ${name} ${secondName}
 Email: ${email}
@@ -458,5 +377,5 @@ Mensagem: ${message}
         });
     </script>
 </body>
-</html>
 
+</html>
